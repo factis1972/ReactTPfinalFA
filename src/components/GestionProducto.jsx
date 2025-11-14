@@ -8,7 +8,6 @@ const GestionProductos = () => {
   const [productos, setProductos] = useState([]);
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const [cargando, setCargando] = useState(true);
-  //const API = "https://68d5d31de29051d1c0afa93e.mockapi.io/productos";
   const API = 'https://69162780a7a34288a27c82d0.mockapi.io/api/Productos';
 
   // Cargar productos al montar el componente

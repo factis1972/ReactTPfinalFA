@@ -3,7 +3,6 @@ import { CarritoContext } from '../context/CarritoContext';
 
 import Styles from './Carrito.module.css'
 
-
 const Carrito = () => {
 
   const { carrito, eliminarDelCarrito } = useContext(CarritoContext);
