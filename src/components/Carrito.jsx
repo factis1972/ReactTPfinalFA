@@ -15,11 +15,11 @@ const Carrito = () => {
             <tr>
               <div className={Styles.prod} key={indice}>
                 <td>
-                  <img src={producto.image} alt={producto.title} height={80} width={80} /> 
+                  <img src={producto.imagen} alt={producto.nombre} height={80} width={80} /> 
                 </td>
                 <td>
-                  <p key={producto.indice}> {producto.title} </p>
-                  <p>$ {producto.price}</p>
+                  <p key={producto.indice}> {producto.nombre} </p>
+                  <p>$ {producto.precio}</p>
                 </td>
                 <td>
                   <button onClick={() => eliminarDelCarrito(indice)} id='Eliminar'>Eliminar</button>
