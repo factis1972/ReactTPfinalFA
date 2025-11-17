@@ -6,6 +6,7 @@ export const ProductosProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedProductId, setSelectedProductId] = useState(null);
   
   const API = 'https://69162780a7a34288a27c82d0.mockapi.io/api/Productos';
   
@@ -62,6 +63,11 @@ export const ProductosProvider = ({ children }) => {
     }
   };
 
+  const detalleProducto = async (producto) => {
+
+
+  };
+
   const editarProducto = async (producto) => {
     try {
       setError(null);
@@ -86,6 +92,7 @@ export const ProductosProvider = ({ children }) => {
       setError(mensajeError);
     }
   };
+
 
    // Funcion para eliminar producto de la API
   const eliminarProducto = async (id) => {
@@ -114,6 +121,8 @@ export const ProductosProvider = ({ children }) => {
     }
   };
 
+  const selectedProduct = productos.find((p) => p.id === selectedProductId);
+
   return (
     <ProductosContext.Provider value={{ 
       productos,
@@ -122,6 +131,10 @@ export const ProductosProvider = ({ children }) => {
       cargarProductos, 
       agregarProducto, 
       editarProducto, 
+      detalleProducto,
+      selectedProductId, 
+      setSelectedProductId,
+      selectedProduct,
       eliminarProducto 
     }}>
       {children}

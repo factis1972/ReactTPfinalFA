@@ -2,12 +2,13 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../context/CarritoContext';
-import { useProductosContext } from "../context/ProductosContext";
+import { useProductosContext } from "../context/ProductosContext"; 
 
 const Productos = () => {
   
   // Usamos los contextos 
-  const { productos, cargando, error } = useProductosContext();
+  const { productos, setSelectedProductId, cargando, error } = useProductosContext();
+  //const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const { agregarAlCarrito } = useContext(CarritoContext);
 
   if (cargando) return 'Cargando productos...';
@@ -22,7 +23,7 @@ const Productos = () => {
             {producto.nombre} : {producto.precio}$
             <img src={producto.imagen} height={80} width={80}/>
             <button onClick={() => agregarAlCarrito(producto)}>Agregar</button>
-            <Link to={`/productos/${producto.id}`} >Detalles</Link>
+            <Link to={`/productos/${producto.id}` } onClick={() => setSelectedProductId(producto.id)}>Detalles</Link>
           </li>
         ))}
       </ul>

@@ -1,26 +1,18 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useProductosContext } from "../context/ProductosContext";
 
 const ProductoDetalle = () => {
   
-  const { id } = useParams();
-  const [producto, setProducto] = useState(null);
+  //uso el contexto 
+  const { selectedProduct } = useProductosContext();
 
-  useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then(respuesta => respuesta.json())
-      .then(dato => setProducto(dato));
-  },[id]);
-
-  if(!producto)
-    return <p>Cargando ......</p>
-  
   return(
     <>
-      <h2>Detalles del Producto Nro {id}</h2>
-      <img src={producto.image} alt={producto.title} width={100} height={100} />
-      <h3>{producto.title}</h3>
-      <p>{producto.description}</p>
+      <h2>Detalles del Producto Nro {selectedProduct.id}</h2>
+      <img src={selectedProduct.imagen} alt={selectedProduct.nombre} width={100} height={100} />
+      <h3>{selectedProduct.nombre}</h3>
+      <p>{selectedProduct.descripcion}</p>
     </>
     
   );
