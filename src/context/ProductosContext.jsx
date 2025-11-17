@@ -63,11 +63,6 @@ export const ProductosProvider = ({ children }) => {
     }
   };
 
-  const detalleProducto = async (producto) => {
-
-
-  };
-
   const editarProducto = async (producto) => {
     try {
       setError(null);
@@ -131,7 +126,6 @@ export const ProductosProvider = ({ children }) => {
       cargarProductos, 
       agregarProducto, 
       editarProducto, 
-      detalleProducto,
       selectedProductId, 
       setSelectedProductId,
       selectedProduct,

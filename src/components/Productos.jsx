@@ -6,9 +6,8 @@ import { useProductosContext } from "../context/ProductosContext";
 
 const Productos = () => {
   
-  // Usamos los contextos 
+  // Usamos los contextos de productos y carrito
   const { productos, setSelectedProductId, cargando, error } = useProductosContext();
-  //const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const { agregarAlCarrito } = useContext(CarritoContext);
 
   if (cargando) return 'Cargando productos...';
