@@ -39,21 +39,21 @@ const GestionProductos = () => {
       <div className={styles.panel}>
         <div className={styles.cabecera}>
            <h2>Lista de Productos</h2>
-        {/* Botón para agregar producto */}
-        <button
-          onClick={abrirFormularioAgregar}
-          className={styles.botonAgregar}
-        >
-          <CirclePlus />
-          <p>Agregar Producto</p>
-        </button>
+          {/* Botón para agregar producto */}
+          <button
+            onClick={abrirFormularioAgregar}
+            className={styles.botonAgregar}
+          >
+            <CirclePlus />
+            <p>Agregar Producto</p>
+          </button>
         </div>
         {/* Lista de productos */}
         <div>
           {productos.length === 0 ? (
             <p>No hay productos</p>
           ) : (
-            <div style={{ display: "grid", gap: "5px"}}>
+            <div style={{ display: "grid", gap: "1px"}}>
               {productos.map((producto) => (
                 <div
                   key={producto.id}
@@ -64,7 +64,7 @@ const GestionProductos = () => {
                   <p>Precio: ${producto.precio}</p>
                   {/* Botones para editar y eliminar este producto */}
                   <button 
-                    className={styles.boton} 
+                    className={styles.boton}
                     onClick={() => abrirFormularioEditar(producto)}
                   >
                    <SquarePen />

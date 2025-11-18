@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
+import Style from './Login.module.css';
+
 // No se pide para la pre-entrega
 const Login = () => {
   const [usuario, setUsuario] = useState('');
@@ -22,26 +24,24 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={manejarSubmit}>
+      <form className={Style.formulario} onSubmit={manejarSubmit}>
         <h3>Iniciar Sesion</h3>
-        <label htmlFor=''>Usuario</label>
-        <br/>
-        <input 
+        <label className={Style.etiqueta} htmlFor=''>Usuario</label>
+        <input className={Style.campos}
           type='text'
           value={usuario}
           onChange={(evento) => setUsuario(evento.target.value)}
         />
         <br/>
-        <label htmlFor=''>Contraseña</label>
-        <br/>
-        <input 
+        <label className={Style.etiqueta} htmlFor=''>Contraseña</label>
+        <input className={Style.campos}
           type='text'
           value={contrasenia}
           onChange={(evento) => setContrasenia(evento.target.value)}
         />
         <br/>
         <br/>
-        <button type='submit'>Iniciar Sesion</button>
+        <button className={Style.btnEnviar} type='submit'>Iniciar Sesion</button>
       </form>
     </>    
   );
