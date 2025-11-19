@@ -15,11 +15,9 @@
 .cabecera {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
-  justify-items: end;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  column-gap: 100px
+  column-gap: 20%;
 }
 
 
@@ -34,7 +32,7 @@
   padding: 3px;
   border-radius: 8px;
   width: 80%; /* Ancho del formulario */
-  margin: 2px auto; /* Centrado en la página */
+  margin: 3px auto; /* Centrado en la página */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   align-items: center;
 } 
@@ -73,7 +71,7 @@
   font-weight: 600;
   font-size: 18px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   gap: 6px;
 }

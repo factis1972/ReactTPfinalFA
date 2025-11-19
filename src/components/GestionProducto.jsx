@@ -35,10 +35,10 @@ const GestionProductos = () => {
   };
 
   return (
-    <div >
       <div className={styles.container}>
+        <h1>Gestión de Productos</h1>
         <div className={styles.cabecera}>
-           <h2>Lista de Productos</h2>
+          <h2>Lista de Productos</h2>
           {/* Botón para agregar producto */}
           <button
             onClick={abrirFormularioAgregar}
@@ -101,7 +101,6 @@ const GestionProductos = () => {
           </>
         )}
       </div>
-    </div>
   );
 };
 
