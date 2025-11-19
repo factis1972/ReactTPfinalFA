@@ -4,7 +4,7 @@ import { useProductosContext } from "../context/ProductosContext";
 import styles from "./GestionProducto.module.css";
 import CirclePlus from "../assets/CirclePlus";
 import SquarePen from "../assets/SquarePen";
-import TrashIcon from "../assets/TrashIcon";
+import TrashIcon from "../assets/TrashIcon"; 
 
 const GestionProductos = () => {
   // Cargando contexto de producto
@@ -35,8 +35,8 @@ const GestionProductos = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.panel}>
+    <div >
+      <div className={styles.container}>
         <div className={styles.cabecera}>
            <h2>Lista de Productos</h2>
           {/* Botón para agregar producto */}
@@ -53,15 +53,23 @@ const GestionProductos = () => {
           {productos.length === 0 ? (
             <p>No hay productos</p>
           ) : (
-            <div style={{ display: "grid", gap: "1px"}}>
+            <div className={styles.contenedor}>
               {productos.map((producto) => (
-                <div
-                  key={producto.id}
-                  className={styles.productoItem}
-                >
-                  <img className={styles.imagen} src={producto.imagen} alt={producto.nombre} />
-                  <h3>{producto.nombre}</h3>
-                  <p>Precio: ${producto.precio}</p>
+                <div key={producto.id} className={styles.itm_producto}>
+                  <div className={styles.imagen}>
+                    <img src={producto.imagen} height={100} width={100} alt={producto.nombre}/>
+                  </div>
+                  <div>
+                    <div className={styles.nombre}>
+                      {producto.nombre}
+                    </div>
+                    <div className={styles.descripcion}>
+                      {producto.descripcion}  
+                    </div> 
+                    <div className={styles.precio}>
+                      $ {producto.precio}
+                    </div>
+                  </div>
                   {/* Botones para editar y eliminar este producto */}
                   <button 
                     className={styles.boton}

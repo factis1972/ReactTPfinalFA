@@ -1,41 +1,47 @@
-.productos{
-    display: flex;
-/*    width: 100%;*/
-    height: auto;
-    flex-wrap: wrap ;
-    align-content: center;
-    align-items: top ;
-    flex-direction: row;
-    background-color: lightgoldenrodyellow;
-    justify-content: space-evenly;
-    padding: 10px;
-    border: 0%;
-    margin: 0%;
+.contenedor {
+    display: grid;
 }
 
-.prod{
-margin: 1%;
-align-items: stretch;
-border: #36C9C6 3px solid;
-text-align: center;
-border-radius: 5px;
-padding: 10px;
-margin: 5px;
-flex-basis: 20%;
+.itm_producto {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    background-color: #f9f9f9; /* Un color de fondo claro */
+    padding: 3px;
+    border-radius: 8px;
+    width: 80%; /* Ancho del formulario */
+    margin: 2px auto; /* Centrado en la página */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    align-items: center;
+  } 
+
+.nombre {
+    padding: 2px;
+    font-weight: bold;
+    text-align: left;
 }
 
-.agregar {
-    background: #36C9C6;
-    padding: 5px 10px;
-    color: black;
-    border: 2px solid darkslategrey;
-    border-radius: 2px;
-    text-shadow: none;
+.descripcion{
+    padding: 2px;
+    text-align: left;
 }
 
-.agregar:hover {
-    background: darkslategray;
-    color: #fff;
-    border: 2px solid lightblue;
-    border-radius: 2px;
-    }
+.precio {
+    padding: 2px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.btnAgregar {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff; /* Un color de botón azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btnAgregar:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  }
