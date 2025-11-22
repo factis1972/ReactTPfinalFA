@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   grid-template-columns: 1fr 4fr 1fr;
   background-color: rgb(70, 197, 70);
-  /*position: sticky;*/
+  position: sticky;
   top: 5px;
 }
 

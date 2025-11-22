@@ -12,13 +12,12 @@ const Productos = () => {
   const { agregarAlCarrito } = useContext(CarritoContext);
 
   if (cargando) return 'Cargando productos...';
-  if (error) return error;
+  if (error) return error; 
 
   return(
     <div className={Style.contenedor}>
       {productos.map((producto) => (
-        <div key={producto.id}>
-          <div  className={Style.itm_producto}>
+          <div  key={producto.id} className={Style.itm_producto}>
             <div className={Style.imagen}>
               <img src={producto.imagen} height={100} width={100}/>
             </div>
@@ -40,7 +39,6 @@ const Productos = () => {
               <button onClick={() => agregarAlCarrito(producto)} className={Style.btnAgregar}>Agregar</button>
             </div>
           </div>
-        </div>
         ))}
     </div>
   );

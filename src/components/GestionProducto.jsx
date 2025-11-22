@@ -19,7 +19,7 @@ const GestionProductos = () => {
     setModoFormulario("agregar");
     setProductoSeleccionado(null); // Sin producto inicial
     setMostrarForm(true);
-  };
+  }; 
 
   // Abrir formulario para EDITAR
   const abrirFormularioEditar = (producto) => {
@@ -35,7 +35,7 @@ const GestionProductos = () => {
   };
 
   return (
-      <div className={styles.container}>
+      <div className={styles.contenedor}>
         <h1>Gestión de Productos</h1>
         <div className={styles.cabecera}>
           <h2>Lista de Productos</h2>
@@ -48,42 +48,42 @@ const GestionProductos = () => {
             <p>Agregar Producto</p>
           </button>
         </div>
-        {/* Lista de productos */}
+        {/* Lista de productos */} 
         <div>
           {productos.length === 0 ? (
             <p>No hay productos</p>
           ) : (
             <div className={styles.contenedor}>
               {productos.map((producto) => (
-                <div key={producto.id} className={styles.itm_producto}>
-                  <div className={styles.imagen}>
-                    <img src={producto.imagen} height={100} width={100} alt={producto.nombre}/>
-                  </div>
-                  <div>
-                    <div className={styles.nombre}>
-                      {producto.nombre}
+                  <div key={producto.id} className={styles.itm_producto}>
+                    <div className={styles.imagen}>
+                      <img src={producto.imagen} height={100} width={100} alt={producto.nombre}/>
                     </div>
-                    <div className={styles.descripcion}>
-                      {producto.descripcion}  
-                    </div> 
-                    <div className={styles.precio}>
-                      $ {producto.precio}
+                    <div>
+                      <div className={styles.nombre}>
+                        {producto.nombre}
+                      </div>
+                      <div className={styles.descripcion}>
+                        {producto.descripcion}  
+                      </div> 
+                      <div className={styles.precio}>
+                        $ {producto.precio}
+                      </div>
                     </div>
+                    {/* Botones para editar y eliminar este producto */}
+                    <button 
+                      className={styles.boton}
+                      onClick={() => abrirFormularioEditar(producto)}
+                    >
+                    <SquarePen />
+                    </button>
+                    <button 
+                      className={styles.boton} 
+                      onClick={() => eliminarProducto(producto.id)}
+                    >
+                    <TrashIcon />
+                    </button>
                   </div>
-                  {/* Botones para editar y eliminar este producto */}
-                  <button 
-                    className={styles.boton}
-                    onClick={() => abrirFormularioEditar(producto)}
-                  >
-                   <SquarePen />
-                  </button>
-                  <button 
-                    className={styles.boton} 
-                    onClick={() => eliminarProducto(producto.id)}
-                  >
-                   <TrashIcon />
-                  </button>
-                </div>
               ))}
             </div>
           )}

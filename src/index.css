@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,43 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+.fira-sans-condensed-regular {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans-condensed-medium {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fira-sans-condensed-semibold {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fira-sans-condensed-regular-italic {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fira-sans-condensed-medium-italic {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fira-sans-condensed-semibold-italic {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 a {
@@ -24,8 +61,8 @@ a:hover {
 
 body {
   margin: 0;
-/*  display: flex;*/
-  place-items: center;
+  display: contents;
+  /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }

@@ -1,10 +1,13 @@
 import { useContext } from 'react';
-import Navbar from './Navbar';
+import Navbar from './NavBar';
 import styles from './Header.module.css';
 import BagIcon from '../assets/BagIcon.jsx'
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
 import { CarritoContext } from '../context/CarritoContext';
+import MrPizza from "./../assets/MrPizza.png";
+
+
 
 const Header = () => {
   const { carrito } = useContext(CarritoContext);
@@ -16,16 +19,16 @@ const Header = () => {
     <header className={styles.header}>
       {/* Seccion Izquierda: Logo */}
       <div className={styles.logo}>
-        ONE PIECE
+        <img src={MrPizza} alt="Mr. Pizza" height={80} width={80}/>
       </div>
       {/* Seccion Central: Componente NavBar */}
-      <div className={styles.navbarContainer}>
+      <div>
         <Navbar />
       </div>
       {/* Seccion Derecha: Iconos */}
       <div className={styles.iconsContainer}>
         { estaLogeado ? 
-          <button onClick={logout} className={styles.login}>Cerrar Sesion </button> 
+          <button onClick={logout} className={styles.login}>Cerrar Sesión </button> 
           :
           <Link to="/login">
             <button className={styles.login}>Ingresá</button>

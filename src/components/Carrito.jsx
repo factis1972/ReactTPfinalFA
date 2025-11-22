@@ -11,22 +11,26 @@ const Carrito = () => {
       <div className={Styles.productos}>
         <h2>Carrito</h2>
         {carrito.map((producto, indice) => (
-          <table className={Styles.tabla}>
-            <tr>
-              <div className={Styles.prod} key={indice}>
-                <td>
-                  <img src={producto.imagen} alt={producto.nombre} height={80} width={80} /> 
-                </td>
-                <td>
-                  <p key={producto.indice}> {producto.nombre} </p>
-                  <p>$ {producto.precio}</p>
-                </td>
-                <td>
-                  <button onClick={() => eliminarDelCarrito(indice)} id='Eliminar'>Eliminar</button>
-                </td>
+            <div key={producto.id} className={Styles.itm_producto}>
+              <div className={Styles.imagen}>
+                <img src={producto.imagen} height={100} width={100} alt={producto.nombre}/>
               </div>
-            </tr>
-            </table>  
+              <div>
+                <div className={Styles.nombre}>
+                  {producto.nombre}
+                </div>
+                <div className={Styles.descripcion}>
+                  {producto.descripcion}  
+                </div> 
+                <div className={Styles.precio}>
+                  $ {producto.precio}
+                </div>
+              </div>
+              <button 
+                className={Styles.boton}
+                onClick={() => eliminarDelCarrito(indice)} id='Eliminar'>Eliminar
+              </button>
+           </div>
         ))}
       </div>
     ); 

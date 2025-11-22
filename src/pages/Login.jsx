@@ -25,7 +25,7 @@ const Login = () => {
   return (
     <>
       <form className={Style.formulario} onSubmit={manejarSubmit}>
-        <h3>Iniciar Sesion</h3>
+        <h3>Iniciar Sesión</h3>
         <label className={Style.etiqueta} htmlFor=''>Usuario</label>
         <input className={Style.campos}
           type='text'
