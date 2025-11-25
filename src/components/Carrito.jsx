@@ -5,11 +5,15 @@ import Styles from './Carrito.module.css'
 
 const Carrito = () => {
 
-  const { carrito, eliminarDelCarrito, total } = useContext(CarritoContext);
+  const { carrito, eliminarDelCarrito, vaciarCarrito, total } = useContext(CarritoContext);
   
   return (
       <div className={Styles.productos}>
         <h2>Carrito</h2>
+        <button 
+                className={Styles.boton}
+                onClick={() => vaciarCarrito()} > Vaciar Carrito
+        </button>
         {carrito.map((producto, indice) => (
             <div key={producto.id} className={Styles.itm_producto}>
               <div className={Styles.imagen}>

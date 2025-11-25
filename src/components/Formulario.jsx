@@ -15,7 +15,7 @@ const Formulario = () => {
 
     return (
         <div className={Style.formulario}>
-            <h3>Déjanos tus datos para recibir nuestro Newsletter semanal</h3>
+            <h3>Déjanos tus datos para recibir nuestra lista de Pizzas y Precios</h3>
             <form onSubmit={manejarEnvio}>
                 <label className={Style.etiqueta} htmlFor="nombre">Nombre</label>
                 <input className={Style.campos}
