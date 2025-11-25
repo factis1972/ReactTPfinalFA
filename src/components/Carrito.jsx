@@ -5,7 +5,7 @@ import Styles from './Carrito.module.css'
 
 const Carrito = () => {
 
-  const { carrito, eliminarDelCarrito } = useContext(CarritoContext);
+  const { carrito, eliminarDelCarrito, total } = useContext(CarritoContext);
   
   return (
       <div className={Styles.productos}>
@@ -32,6 +32,7 @@ const Carrito = () => {
               </button>
            </div>
         ))}
+        <h3>Total $ {total.toFixed(2)} </h3>
       </div>
     ); 
   };

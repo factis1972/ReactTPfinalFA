@@ -35,7 +35,7 @@ const Login = () => {
         <br/>
         <label className={Style.etiqueta} htmlFor=''>Contraseña</label>
         <input className={Style.campos}
-          type='text'
+          type='password'
           value={contrasenia}
           onChange={(evento) => setContrasenia(evento.target.value)}
         />
@@ -48,3 +48,7 @@ const Login = () => {
 }
 
 export default Login;
+
+
+/*{usuario}*/
+/*{contrasenia}*/
