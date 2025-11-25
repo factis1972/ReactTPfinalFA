@@ -1,18 +1,17 @@
-//  const URL = 'https://69162780a7a34288a27c82d0.mockapi.io/api/Productos';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../context/CarritoContext';
 import { useProductosContext } from "../context/ProductosContext"; 
 import Style from './Productos.module.css';
 
-const Productos = () => {
+const Especiales = () => {
   
   // Usamos los contextos de productos y carrito
   const { productos, setSelectedProductId, cargando, error } = useProductosContext();
   const { agregarAlCarrito } = useContext(CarritoContext);
 
   // Filtro las pizzas tipo Tradicional
-  const prodTipo = productos.filter((producto, indice) => producto.tipo.includes('Tradicional'))
+  const prodTipo = productos.filter((producto, indice) => producto.tipo.includes('Especial'))
 
   if (cargando) return 'Cargando productos...';
   if (error) return error; 
@@ -47,4 +46,4 @@ const Productos = () => {
   );
 };
 
-export default Productos;
+export default Especiales;

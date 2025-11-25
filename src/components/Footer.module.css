@@ -14,7 +14,8 @@
   .footerNav {
     list-style: none;
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     display: flex;
     justify-content: center; 
     gap: 30px; 

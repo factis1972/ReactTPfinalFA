@@ -61,7 +61,7 @@ const GestionProductos = () => {
                     </div>
                     <div>
                       <div className={styles.nombre}>
-                        {producto.nombre}
+                        {producto.nombre} ({producto.tipo})
                       </div>
                       <div className={styles.descripcion}>
                         {producto.descripcion}  

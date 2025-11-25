@@ -1,12 +1,12 @@
 /* Contenedor principal */
 .formulario {
-    background-color: #f9f9f9; /* Un color de fondo claro */
+    background-color: whitesmoke; /* Un color de fondo claro */
     padding: 20px;
     border-radius: 8px;
     width: 350px; /* Ancho del formulario */
     margin: 20px auto; /* Centrado en la página */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  }
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); /* Sombra sutil */
+    }
   
   /* Campos de entrada */
   .campos {

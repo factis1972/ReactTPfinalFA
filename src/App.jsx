@@ -7,6 +7,7 @@ import Inicio from './pages/Inicio';
 import Moda from './pages/Moda';
 import ProductoDetalle from './pages/ProductoDetalle';
 import Contacto from './pages/Contacto.jsx';
+import PizzasEspeciales from './pages/PizzasEspeciales.jsx';
 
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Inicio/>}/> 
         <Route path='/catalogo' element={<Catalogo/>}/> 
+        <Route path='/especiales' element={<PizzasEspeciales/>}/> 
         <Route path='/moda' element={<Moda/>}/> 
         <Route path='/productos/:id' element={<ProductoDetalle/>}/>
         <Route path='/contacto' element={<Contacto/>}/> 

@@ -48,6 +48,22 @@ const FormProducto = ({ productoInicial = {}, modo = "agregar", onCerrar }) => {
           {/* Cuerpo del Modal */}
           <form onSubmit={manejarSubmit}>
             <div className={styles.formGrid}>
+              {/* Campo Tipo */}
+              <div className={styles.colSpan2}>
+                <label className={styles.formLabel}>
+                  Tipo
+                </label>
+                <input
+                  type="text"
+                  name="tipo"
+                  id="tipo"
+                  className={styles.formInputBase}
+                  placeholder="Ingrese el Tipo del producto"
+                  value={producto.tipo || ""}
+                  onChange={manejarChange}
+                  required
+                />
+              </div>  
               {/* Campo Nombre */}
               <div className={styles.colSpan2}>
                 <label className={styles.formLabel}>

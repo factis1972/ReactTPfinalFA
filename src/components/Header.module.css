@@ -10,7 +10,7 @@
   grid-template-columns: 1fr 4fr 1fr;
   background-color: rgb(70, 197, 70);
   position: sticky;
-  top: 5px;
+  top: 0px;
 }
 
 .logo {

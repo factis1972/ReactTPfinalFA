@@ -17,6 +17,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 15px; 
+  gap: 15px;
 }
 
   
@@ -30,6 +31,4 @@ nav {
   
   .link:hover {
     color: whitesmoke; 
-    
-    /*border-bottom: 2px solid #0d0d0d; */
   }

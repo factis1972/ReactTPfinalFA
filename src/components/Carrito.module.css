@@ -19,7 +19,7 @@
     border-radius: 8px;
     width: 80%; /* Ancho del formulario */
     margin: 3px auto; /* Centrado en la página */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); /* Sombra sutil */
     align-items: center;
   } 
   
