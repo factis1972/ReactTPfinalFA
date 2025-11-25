@@ -1,19 +1,20 @@
 .contenedor {
     display: grid;
-}
+} 
 
 .itm_producto {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr;
     background-color: #FEF9C2; /* Un color de fondo claro */
-    padding: 10px;
+    padding: 3px;
     border-radius: 8px;
     width: 80%; /* Ancho del formulario */
     margin: 3px auto; /* Centrado en la página */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     align-items: center;
-    justify-content: space-between;
+/*    justify-content: space-between;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+*/    
   } 
  
 .nombre {
@@ -34,7 +35,7 @@
 }
 
 .btnAgregar {
-    width: 100%;
+    /*width: 100%;*/
     padding: 12px 20px;
     background-color: #007bff; /* Un color de botón azul */
     color: white;

@@ -1,7 +1,9 @@
+import Pizza from "./../assets/Pizza.jpg";
+
 const Inicio = () => {
   return(
     <>
-      <h1>inicio</h1>
+      <img src={Pizza} alt="Mr. Pizza" width="100%"/>
     </>
   );
 }

@@ -7,8 +7,6 @@ import { useAuthContext } from '../context/AuthContext';
 import { CarritoContext } from '../context/CarritoContext';
 import MrPizza from "./../assets/MrPizza.png";
 
-
-
 const Header = () => {
   const { carrito } = useContext(CarritoContext);
   const {usuario, logout} = useAuthContext();
