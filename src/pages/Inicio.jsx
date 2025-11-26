@@ -10,3 +10,6 @@ const Inicio = () => {
 
 export default Inicio;
 
+/*
+      <img src={Pizza} alt="Mr. Pizza" className="bg-fixed" />
+*/
