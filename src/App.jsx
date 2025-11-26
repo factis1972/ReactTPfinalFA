@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 
 import Inicio from './pages/Inicio';
-import Moda from './pages/Moda';
+//import Moda from './pages/Moda';
 import ProductoDetalle from './pages/ProductoDetalle';
 import Contacto from './pages/Contacto.jsx';
 import PizzasEspeciales from './pages/PizzasEspeciales.jsx';
