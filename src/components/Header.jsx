@@ -114,7 +114,7 @@ const Header = () => {
         <div className="px-8 py-16 flex flex-col gap-12 min-h-screen">
           {/* Logo en el menu en celular */}
           <div className="text-5xl font-['Pirata_One'] text-white text-center mb-4">
-            ONE PIECE
+            <img src={MrPizza} alt="Mr. Pizza" height={80} width={80}/>
           </div>
 
           {/* Navbar en celular */}
@@ -146,7 +146,7 @@ const Header = () => {
                     logout();
                     cerrarMenu();
                   }} 
-                  className="w-full rounded-md bg-black px-4 py-3 text-base font-semibold text-white hover:bg-white hover:text-black transition-colors duration-200"
+                  className="w-full rounded-md bg-black px-4 py-3 text-base font-semibold text-green500 hover:bg-white hover:text-black transition-colors duration-200"
                 >
                   Cerrar Sesión
                 </button>
