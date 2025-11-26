@@ -1,6 +1,6 @@
 nav {
   display: grid;
-  background-color: rgb(70, 197, 70);
+/*  background-color: rgb(70, 197, 70);*/
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fill, 1fr);
 }
@@ -18,18 +18,19 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 15px; 
-  gap: 15px;
+  gap: 20px;
 }
 
   
-  .link {
-    text-decoration: none;
-    color: #1d1d1d;
-    font-size: 20px;
-    padding: 5px 0; 
-    margin: 0 10px;
-  }
-  
-  .link:hover {
-    color: whitesmoke; 
-  }
+.link {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-size: 20px;
+  padding: 5px 0; 
+  margin: 0 10px;
+}
+
+.link:hover {
+  color: whitesmoke; 
+}
+

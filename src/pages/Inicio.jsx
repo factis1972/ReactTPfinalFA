@@ -1,11 +1,12 @@
-import Pizza from "./../assets/Pizza.jpg";
+import Pizza from "./../assets/PizzaNueva.jpg";
 
 const Inicio = () => {
   return(
-    <>
-      <img src={Pizza} alt="Mr. Pizza" width="100%"/>
-    </>
+    <div>
+      <img src={Pizza} alt="Mr. Pizza" className="bg-fixed" />
+    </div>
   );
 }
 
 export default Inicio;
+

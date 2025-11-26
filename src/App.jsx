@@ -18,6 +18,8 @@ import RutaProtegida from './components/RutaProtegida.jsx'
 import Carrito from './components/Carrito.jsx' 
 import Catalogo from './pages/Catalogo.jsx';
 
+
+
 function App() {
 //  const [isAuthenticated, setisAuthenticated] = useState(true);
 
@@ -28,6 +30,7 @@ function App() {
 
   return (
     <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
+
       <Header />
 
       <Routes>

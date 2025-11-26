@@ -7,7 +7,7 @@ const NavBar = () => {
   const esAdmin = usuario === 'admin';
 
     return(
-      <nav>
+      <nav className="bg-white/50 backdrop-filter backdrop-blur-md sticky top-0 p-4">
         <ul className="flex md:flex-row flex-col md:gap-10 gap-8 items-center md:items-center">
           <li className={styles.item}>
             <Link to="/" 

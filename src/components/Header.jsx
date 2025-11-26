@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-    <header  className="flex justify-between items-center px-10 border-b border-gray-200 relative z-50 py-3">
+    <header  className="flex justify-between items-center px-10 border-b border-gray-200 relative z-50 py-3 bg-white/50 backdrop-filter backdrop-blur-md sticky top-0 p-4">
       {/* Boton Menu Hamburguesa - Solo visible en celular */}
       <button 
         className="md:hidden flex flex-col justify-between w-6 h-5 z-100"
@@ -78,7 +78,7 @@ const Header = () => {
             </>
           ) : (
             <Link to="/login" className="hidden md:block">
-              <button className="flex justify-center rounded-md border border-white bg-black px-3 py-1.5 text-sm font-semibold text-white hover:bg-[#333] transition-colors duration-200">
+              <button className="flex justify-center rounded-md border border-white bg-green px-3 py-1.5 text-sm font-semibold text-white hover:bg-[#333] transition-colors duration-200">
                 Ingresá
               </button>
             </Link>
