@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import './App.css'
+//import './App.css'
 import { Routes, Route } from 'react-router-dom';
 
 import Inicio from './pages/Inicio';
@@ -19,22 +19,21 @@ import Carrito from './components/Carrito.jsx'
 import Catalogo from './pages/Catalogo.jsx';
 
 function App() {
-  const [isAuthenticated, setisAuthenticated] = useState(true);
+//  const [isAuthenticated, setisAuthenticated] = useState(true);
 
-  const cerrarSesion = () => setisAuthenticated(false);
-  const iniciarSesion = () => setisAuthenticated(true);
+//  const cerrarSesion = () => setisAuthenticated(false);
+//  const iniciarSesion = () => setisAuthenticated(true);
 
  // const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
       <Header />
 
       <Routes>
         <Route path='/' element={<Inicio/>}/> 
         <Route path='/catalogo' element={<Catalogo/>}/> 
         <Route path='/especiales' element={<PizzasEspeciales/>}/> 
-        <Route path='/moda' element={<Moda/>}/> 
         <Route path='/productos/:id' element={<ProductoDetalle/>}/>
         <Route path='/contacto' element={<Contacto/>}/> 
         <Route path={'/login'} element={<Login/>} />
@@ -45,14 +44,18 @@ function App() {
           }
         />
         <Route path={'/admin'} element={
-          <RutaProtegida isAuthenticated={isAuthenticated}>
+          <RutaProtegida> 
               <Admin/>
             </RutaProtegida>} 
         />
       </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 
 export default App;
+
+/*
+         <Route path='/moda' element={<Moda/>}/> 
+*/

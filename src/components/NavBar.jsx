@@ -8,14 +8,19 @@ const NavBar = () => {
 
     return(
       <nav>
-        <ul className={styles.lista}>
+        <ul className="flex md:flex-row flex-col md:gap-10 gap-8 items-center md:items-center">
           <li className={styles.item}>
-            <Link to="/" className={styles.link}>Inicio</Link>
-            <Link to="/catalogo" className={styles.link}>Pizzas Tradicionales</Link>
-            <Link to="/especiales" className={styles.link}>Pizzas Especiales</Link>
-            <Link to="/contacto" className={styles.link}>Contacto</Link>
+            <Link to="/" 
+            className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Inicio</Link>
+            <Link to="/catalogo" 
+            className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Pizzas Tradicionales</Link>
+            <Link to="/especiales" 
+            className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Pizzas Especiales</Link>
+            <Link to="/contacto" 
+            className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Contacto</Link>
             {esAdmin && 
-              <Link to="/Admin" className={styles.link}>Admin</Link>
+              <Link to="/Admin" 
+              className="text-gray-700 md:text-lg text-2xl font-medium hover:text-black transition-colors duration-200 hover:underline underline-offset-4">Admin</Link>
             }
           </li>
         </ul>

@@ -4,35 +4,53 @@ export const CarritoContext = createContext();
 // Proveedor del contexto
 export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [prod, setProd] = useState([]);
-
 
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-    setTotal(Number(total)+Number((producto.precio)));
+    // Buscar si el producto ya existe en el carrito
+    const productoExistente = carrito.findIndex(item => item.id === producto.id);
+    
+    if (productoExistente !== -1) {
+      // Si el producto ya existe, aumentar la cantidad
+      const nuevoCarrito = [...carrito];
+      const cantidadActual = nuevoCarrito[productoExistente].cantidad || 1;
+      nuevoCarrito[productoExistente] = {
+        ...nuevoCarrito[productoExistente],
+        cantidad: cantidadActual + 1
+      };
+      setCarrito(nuevoCarrito);
+    } else {
+      // Si el producto no existe, agregarlo con cantidad 1
+      setCarrito([...carrito, { ...producto, cantidad: 1 }]);
+    }
   };
 
+  const actualizarCantidad = (indice, nuevaCantidad) => {
+    const nuevoCarrito = [...carrito];
+    nuevoCarrito[indice] = { ...nuevoCarrito[indice], cantidad: nuevaCantidad };
+    setCarrito(nuevoCarrito);
+  };
   // Usamos filter() para crear un nuevo array que excluye el elemento
   // con el índice dado.
   const eliminarDelCarrito = (indiceAEliminar) => {
-    
-    setProd(carrito.filter((_, indice) => indice === indiceAEliminar));
-    console.log(prod);
-  //  setCarrito(carrito.filter((_, indice) => indice !== indiceAEliminar));
-    setTotal(Number(total)-Number((prod.precio)));
+    setCarrito(carrito.filter((_, indice) => indice !== indiceAEliminar));
   };
 
   const vaciarCarrito = () => {
     setCarrito([]);
-    setTotal(0);
   };
 
   return (
     <CarritoContext.Provider
-      value={{ carrito, total, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}
+      value={{
+        carrito,
+        agregarAlCarrito,
+        actualizarCantidad,
+        eliminarDelCarrito,
+        vaciarCarrito,
+      }}
     >
       {children}
     </CarritoContext.Provider>
   );
 };
+

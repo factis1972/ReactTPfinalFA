@@ -1,48 +1,47 @@
-//  const URL = 'https://69162780a7a34288a27c82d0.mockapi.io/api/Productos';
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CarritoContext } from '../context/CarritoContext';
-import { useProductosContext } from "../context/ProductosContext"; 
-import Style from './Productos.module.css';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+
+import { useProductosContext } from "../context/ProductosContext";
 
 const Productos = () => {
-  
-  // Usamos los contextos de productos y carrito
-  const { productos, setSelectedProductId, cargando, error } = useProductosContext();
-  const { agregarAlCarrito } = useContext(CarritoContext);
+  // Usamos los contextos
+  const { productos, cargando, error } = useProductosContext();
 
   // Filtro las pizzas tipo Tradicional
   const prodTipo = productos.filter((producto, indice) => producto.tipo.includes('Tradicional'))
 
-  if (cargando) return 'Cargando productos...';
-  if (error) return error; 
+  if (cargando) return "Cargando productos...";
+  if (error) return error;
 
-  return(
-    <div className={Style.contenedor}>
-      {prodTipo.map((producto) => (
-          <div  key={producto.id} className={Style.itm_producto}>
-            <div className={Style.imagen}>
-              <img src={producto.imagen} height={100} width={100}/>
-            </div>
-            <div>
-              <div className={Style.nombre}>
-                {producto.nombre}
+  return (
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+        Productos
+      </h2>
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        {prodTipo.map((producto) => (
+          <div key={producto.id} className="group relative">
+            <img
+              alt={producto.nombre}
+              src={producto.imagen}
+              className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
+            />
+            <div className="mt-4 flex justify-between">
+              <div>
+                <h3 className="text-sm text-gray-700">
+                  <Link to={`/productos/${producto.id}`}>
+                    <span aria-hidden="true" className="absolute inset-0" />
+                    {producto.nombre}
+                  </Link>
+                </h3>
               </div>
-              <div className={Style.descripcion}>
-                {producto.descripcion}  
-              </div> 
-              <div className={Style.precio}>
-                $ {producto.precio}
-               </div>
-            </div>    
-            <div>
-              <Link to={`/productos/${producto.id}` } onClick={() => setSelectedProductId(producto.id)}>Detalles</Link>
-            </div>
-            <div>
-              <button onClick={() => agregarAlCarrito(producto)} className={Style.btnAgregar}>Agregar</button>
+              <p className="text-sm font-medium text-gray-900">
+                ${producto.precio}
+              </p>
             </div>
           </div>
         ))}
+      </div>
     </div>
   );
 };
