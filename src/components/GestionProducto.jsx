@@ -82,9 +82,12 @@ const GestionProductos = () => {
 
                 {/* Información del producto */}
                 <div className="grow flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 w-full">
-                  <div className=" flex grow">
+                  <div className=" flex grow flex-col">
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                      {producto.nombre}
+                      {producto.nombre}  ({producto.tipo})
+                    </h3>
+                    <h3 className="text-lg font-normal text-gray-900 mb-1">
+                      {producto.descripcion}
                     </h3>
                     <p className="text-2xl font-bold text-gray-900">
                       ${producto.precio?.toLocaleString('es-AR')}

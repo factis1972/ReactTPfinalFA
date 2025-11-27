@@ -40,9 +40,9 @@ const Carrito = () => {
           <svg className="mx-auto h-24 w-24 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
           </svg>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Tu carrito está vacío</h2>
-          <p className="text-gray-600 mb-6">¡Agregá productos para comenzar tu compra!</p>
-          <a href="/" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Aún no pudiste decidir?</h2>
+          <p className="text-gray-600 mb-6">¡Agregá productos para hacer tu pedido!</p>
+          <a href="/catalogo" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
             Ir a comprar
           </a>
         </div>
@@ -52,7 +52,7 @@ const Carrito = () => {
   
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Carrito de Compras</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">Mi pedido</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Columna Izquierda - Lista de Productos */}
         <div className="lg:col-span-2 space-y-4">
@@ -113,11 +113,11 @@ const Carrito = () => {
                       <div className="flex items-center justify-between sm:justify-end gap-4">
                         <div className="text-right">
                           <p className="text-lg font-bold text-gray-900">
-                            ${precioTotal.toLocaleString('es-AR')}
+                             {precioTotal.toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 2})}
                           </p>
                           {cantidad > 1 && (
                             <p className="text-xs text-gray-500">
-                              ${producto.precio.toLocaleString('es-AR')} c/u
+                              {Number(producto.precio).toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 2})} c/u
                             </p>
                           )}
                         </div>
@@ -147,7 +147,7 @@ const Carrito = () => {
             <div className="space-y-4 mb-6">
               <div className="flex justify-between text-gray-700">
                 <span>Subtotal</span>
-                <span className="font-medium">${subtotal.toLocaleString('es-AR')}</span>
+                <span className="font-medium"> {subtotal.toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 2})}</span>
               </div>
               
               <div className="flex justify-between text-gray-700">
@@ -156,7 +156,7 @@ const Carrito = () => {
                   {envio === 0 ? (
                     <span className="text-green-600">¡Gratis!</span>
                   ) : (
-                    `$${envio.toLocaleString('es-AR')}`
+                    ` ${envio.toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 2})}`
                   )}
                 </span>
               </div>
@@ -165,7 +165,7 @@ const Carrito = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-gray-900">Total</span>
                   <span className="text-2xl font-bold text-gray-900">
-                    ${total.toLocaleString('es-AR')}
+                    {total.toLocaleString('es-AR', {style: 'currency', currency: 'ARS', minimumFractionDigits: 2})}
                   </span>
                 </div>
               </div>
