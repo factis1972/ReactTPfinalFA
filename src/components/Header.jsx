@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext.jsx';
 import { CarritoContext } from '../context/CarritoContext.jsx';
 import MrPizza from "./../assets/MrPizza.png";
+import BarraBusqueda from "../components/BarraBusqueda";
  
 const Header = () => {
   const { carrito } = useContext(CarritoContext);
@@ -53,6 +54,8 @@ const Header = () => {
 
       {/* Seccion Derecha: Iconos */}
       <div className="flex items-center gap-3 md:gap-4">
+          {/* Barra de Busqueda */}
+          <BarraBusqueda />
           {estaLogeado ? (
             <>
               {/* Si es admin, hacer el nombre clickeable, si no, solo texto */}
@@ -99,7 +102,7 @@ const Header = () => {
     </header>   
       {/* Menu Movil Fullscreen */}
       <div 
-        className={`fixed top-0 left-0 w-full h-screen bg-black z-100 overflow-y-auto transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-screen bg-green-600 z-100 overflow-y-auto transition-transform duration-300 ease-in-out ${
           menuAbierto ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import TrashIcon from "../assets/TrashIcon";
-import BagIcon from "../assets/BagIcon";
-
 
 
 const Carrito = () => {

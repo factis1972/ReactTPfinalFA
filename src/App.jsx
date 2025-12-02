@@ -17,6 +17,7 @@ import Admin from './pages/Admin.jsx'
 import RutaProtegida from './components/RutaProtegida.jsx'
 import Carrito from './components/Carrito.jsx' 
 import Catalogo from './pages/Catalogo.jsx';
+import ResultadosBusqueda from "./components/ResultadosBusqueda";
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/productos/:id' element={<ProductoDetalle/>}/>
         <Route path='/contacto' element={<Contacto/>}/> 
         <Route path={'/login'} element={<Login/>} />
+        <Route path="/busqueda" element={<ResultadosBusqueda />} />
         <Route path="/carrito" element={
             <RutaProtegida >
               <Carrito />
