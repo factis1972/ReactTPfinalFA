@@ -15,28 +15,34 @@ const Formulario = () => {
 
     return (
         <div className={Style.formulario}>
-            <h3>Déjanos tus datos para recibir nuestra lista de Pizzas y Precios</h3>
+            <h3>Déjanos tus datos para recibir nuestra lista de Pizzas y Precios</h3> <br />
             <form onSubmit={manejarEnvio}>
                 <label className={Style.etiqueta} htmlFor="nombre">Nombre</label>
                 <input className={Style.campos}
-                    value={nombre}
+                    value={nombre || ""}
                     type="text"
+                    placeholder="Ingrese su nombre"
                     onChange={evento=>setNombre(evento.target.value)}
                     id="nombre"
+                    required
                 />
                 <label className={Style.etiqueta} htmlFor="apellido">Apellido</label>
                 <input className={Style.campos}
-                    value={apellido}
+                    value={apellido || ""}
                     type="text"
+                    placeholder="Ingrese su apellido"
                     onChange={evento=>setApellido(evento.target.value)}
                     id="apellido"
+                    required
                 />
                 <label className={Style.etiqueta} htmlFor="email">E-mail</label>
                 <input className={Style.campos}
                     value={mail}
                     type="email"
+                    placeholder="Ingrese su dirección de correo electrónico"
                     onChange={evento=>setMail(evento.target.value)}
                     id="email"
+                    required
                 />
                 <button className={Style.btnEnviar} type="submit">
                     Enviar
