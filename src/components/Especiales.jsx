@@ -12,7 +12,7 @@ const Especiales = () => {
   const prodTipo = productos.filter((producto, indice) => producto.tipo.includes('Especial'))
 
   // Logica de Paginacion 
-  const productosPorPagina = 8; 
+  const productosPorPagina = 4; 
   const [paginaActual, setPaginaActual] = useState(1);
 
   if (cargando) return "Cargando productos...";
@@ -21,10 +21,10 @@ const Especiales = () => {
   // Calcular el índice de los productos a mostrar en la página actual
   const indiceUltimoProducto = paginaActual * productosPorPagina;
   const indicePrimerProducto = indiceUltimoProducto - productosPorPagina;
-  const productosActuales = productos.slice(indicePrimerProducto, indiceUltimoProducto);
+  const productosActuales = prodTipo.slice(indicePrimerProducto, indiceUltimoProducto);
 
   // Cambiar de pagina
-  const totalPaginas = Math.ceil(productos.length / productosPorPagina);
+  const totalPaginas = Math.ceil(prodTipo.length / productosPorPagina);
   const cambiarPagina = (numeroPagina) => setPaginaActual(numeroPagina);
 
   return (
@@ -33,7 +33,7 @@ const Especiales = () => {
         Especiales
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        {prodTipo.map((producto) => (
+        {productosActuales.map((producto) => (
           <div key={producto.id} className="group relative">
             <img
               alt={producto.nombre}
