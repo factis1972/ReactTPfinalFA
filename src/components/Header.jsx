@@ -38,8 +38,6 @@ const Header = () => {
         aria-label="Abrir menú"
         >
         <span className="w-full bg-gray h-0.5 rounded transition-all duration-300"></span>
-        <span className="w-full bg-gray h-0.5 rounded transition-all duration-300"></span>
-        <span className="w-full bg-gray h-0.5 rounded transition-all duration-300"></span>
       </button>
 
       {/* Seccion Izquierda: Logo */}
