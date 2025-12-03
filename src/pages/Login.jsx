@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-row static bg-cover bg-no-repeat bg-center justify-center" style={{ backgroundImage: `url(${IniciarSesion})` } }  >
-      <div className="bg-white/50 backdrop-filter flex min-h-full flex-col justify-center px-6 lg:px-8 basis-sm">
+      <div className="bg-white/50 backdrop-filter flex flex-col justify-center px-6 lg:px-8 basis-sm  my-auto rounded-md">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-black">
             Iniciar Sesion
