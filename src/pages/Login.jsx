@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
+import IniciarSesion from "./../assets/IniciarSesion.jpg";
 
 const Login = () => {
   const [usuario, setUsuario] = useState("");
@@ -20,8 +21,8 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="flex min-h-full flex-col justify-center px-6 lg:px-8">
+    <div className="flex flex-row static bg-cover bg-no-repeat bg-center justify-center" style={{ backgroundImage: `url(${IniciarSesion})` } }  >
+      <div className="bg-white/50 backdrop-filter flex min-h-full flex-col justify-center px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-black">
             Iniciar Sesion
@@ -99,7 +100,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

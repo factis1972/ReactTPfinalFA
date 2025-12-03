@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import TrashIcon from "../assets/TrashIcon";
 import DeliveryPizza from "./../assets/DeliveryPizza.jpg";
-
+ 
 const Carrito = () => {
   const { carrito, eliminarDelCarrito, actualizarCantidad } = useContext(CarritoContext);
   
@@ -33,16 +33,18 @@ const Carrito = () => {
   
   if (carrito.length === 0) {
     return (
-      <div className="min-h-[60vh] flex flex-col items-center justify-center px-4">
-        <div className="text-center">
-          <svg className="mx-auto h-24 w-24 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-          </svg>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Aún no pudiste decidir?</h2>
-          <p className="text-gray-600 mb-6">¡Agregá productos para hacer tu pedido!</p>
-          <a href="/catalogo" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
-            Ir a comprar
-          </a>
+      <div className="flex flex-row static bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${DeliveryPizza})` } }  >
+        <div className="min-h-[60vh] flex flex-col items-center justify-center px-4">
+          <div className="text-center">
+            <svg className="mx-auto h-24 w-24 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Aún no pudiste decidir?</h2>
+            <p className="text-gray-600 mb-6">¡Agregá productos para hacer tu pedido!</p>
+            <a href="/catalogo" className="inline-block bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-[#333] transition-colors duration-200">
+              Ir a comprar
+            </a>
+          </div>
         </div>
       </div>
     );
