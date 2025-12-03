@@ -52,15 +52,17 @@
   font-style: italic;
 }
 
-
+/*
 a {
   font-weight: 500;
   text-decoration: inherit;
 }
-
+*/
+/*
 a:hover {
   color: whitesmoke;
 }
+*/
 
 body {
   margin: 0;
@@ -87,10 +89,12 @@ button {
   transition: border-color 0.25s;
   color:whitesmoke;
 }
+
 button:hover {
   border-color: whitesmoke;
   color: rgb(160, 241, 160);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -102,8 +106,9 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
+  /*
 a:hover {
   color: black;
 }
-
+*/
 }
