@@ -28,7 +28,7 @@ const Login = () => {
             Iniciar Sesion
           </h2>
         </div>
-
+ 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form onSubmit={manejarSubmit} className="space-y-6">
             <div>
