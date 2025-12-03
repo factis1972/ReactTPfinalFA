@@ -34,7 +34,7 @@ const Carrito = () => {
   if (carrito.length === 0) {
     return (
       <div className="flex flex-row static bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${DeliveryPizza})` } }  >
-        <div className="min-h-[60vh] flex flex-col items-center justify-center px-4">
+        <div className="bg-white/70 backdrop-filter min-h-[60vh] flex flex-col items-center justify-center px-4">
           <div className="text-center">
             <svg className="mx-auto h-24 w-24 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
