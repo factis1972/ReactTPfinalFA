@@ -84,13 +84,13 @@ const ProductoDetalle = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"> 
+    <div className="max-w-7xl my-auto mx-auto px-4 sm:px-6 lg:px-8 py-4"> 
       {/* Contenido Principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-0">
         {/* Columna Izquierda la de Imagen */}
-        <div className="flex items-start justify-center">
+        <div className="flex justify-center">
           <div className="w-full max-w-lg">
-            <div className="bg-gray-100 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
+            <div className="bg-gray-100 rounded-lg overflow-hidden aspect-square flex justify-center">
               <img 
                 src={producto.imagen} 
                 alt={producto.nombre}
